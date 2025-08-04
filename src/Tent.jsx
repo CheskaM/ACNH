@@ -3,10 +3,7 @@ import campsite from './assets/campsite.jpg'
 
 function Tent() {
 
-    /*const apiKey = "4887c202-881d-407a-b782-0e1cc34622a2";
-    const url = `https://api.nookipedia.com/villagers?=${apiKey}`;*/
 
-    fetch(`https://api.nookipedia.com/villagers/${"4887c202-881d-407a-b782-0e1cc34622a2"}`)
         .then(response => response.json())
         .then(data => console.log(data));
 
