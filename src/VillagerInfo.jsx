@@ -1,5 +1,10 @@
 
-import Villager from './Villager.jsx'
+
+
+
+
+
+/*import Villager from './Villager.jsx'
 
 function VillagerInfo(){
     return(
@@ -9,4 +14,4 @@ function VillagerInfo(){
     );
 }
 
-export default VillagerInfo
+export default VillagerInfo */

@@ -2,22 +2,22 @@ import campsite from './assets/campsite.jpg'
 import {useEffect} from 'react'
 
 function Tent() {
-    const apiKey = process.env.REACT_APP_API_KEY; /*we do this portion so we don't expose our apiKey */
+    const apiKey = import.meta.env.VITE_API_KEY; /*we do this portion so we don't expose our apiKey */
 
     useEffect(() => {
-        fetch(`https://api.nookipedia.com/villagers`, {
+        fetch('https://api.nookipedia.com/villagers', {
             headers: {
-                `X-API-KEY`: apiKey,
-                'Accept-Version': `1.7.0`
+                'X-API-KEY': apiKey,
+                'Accept-Version': '1.7.0'
             }
         })
         .then(response => {
             if(!response.ok) {
-                throw new Error(`API key is not working`);
+                throw new Error('API key is not working');
             }
             return response.json();
         })
-        .then(data => console.log(`There's data`, data))
+        .then(villagers => console.log(`There's data`, villagers))
         .catch(err => console.error(`Error`, err.message));
     }, []);
 
@@ -46,7 +46,3 @@ function Tent() {
 }
 
 export default Tent
-
-/*fetch("https://api.nookipedia.com/villagers")
-    .then((res) => res.json())
-    .then((data) => console.log(data));*/
