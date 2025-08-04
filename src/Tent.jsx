@@ -1,11 +1,31 @@
 import campsite from './assets/campsite.jpg'
-
+import {useEffect} from 'react'
 
 function Tent() {
+    const apiKey = process.env.REACT_APP_API_KEY; /*we do this portion so we don't expose our apiKey */
 
+    useEffect(() => {
+        fetch(`https://api.nookipedia.com/villagers`, {
+            headers: {
+                `X-API-KEY`: apiKey,
+                'Accept-Version': `1.7.0`
+            }
+        })
+        .then(response => {
+            if(!response.ok) {
+                throw new Error(`API key is not working`);
+            }
+            return response.json();
+        })
+        .then(data => console.log(`There's data`, data))
+        .catch(err => console.error(`Error`, err.message));
+    }, []);
 
-        .then(response => response.json())
-        .then(data => console.log(data));
+    return(
+        <div>
+            <h2>API response</h2>
+        </div>
+    );
 
 
     /*return(
