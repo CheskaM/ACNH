@@ -1,7 +1,17 @@
 # React + Vite
 
-Requires an API Key that will be submitted to Code You along with the project.
+IMPORTANT:
+
+* Requires an API Key that will be submitted to Code You along with the project.
 https://docs.google.com/forms/d/e/1FAIpQLScTcSRm4VhhgNHFmk6chQ0S7ppXSa4fzrBpAwlEtaG-aOxxVw/viewform
+
+--------------------------------------------------------------------------------------------------------------------
+
+Things I'm happy about my project:
+
+* The fact that I can build on it more especially since the Navbar has more space for pages if I want to add more stuff!
+
+--------------------------------------------------------------------------------------------------------------------
 
 /*This should showcase all the Bugs that are in ACNH and can be sorted alphabetically*/
 
@@ -83,7 +93,7 @@ export default Fish
 
 
 -----------------------------------------------------------------------------------------
-import Header from './Header.jsx'
+
 import Footer from './Footer.jsx'
 import Tent from './Tent.jsx'
 import Button from './Button.jsx'
@@ -99,27 +109,67 @@ import MainNavigation from './MainNavigation.jsx';
     </>
   );
 
-
+------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 
 
 
 INDEX: 
 
-HashRouter - wraps everything 
-Routes - component that maps all potential route
-Route - component we use for each individual page.
+* HashRouter - wraps everything 
+* Routes - component that maps all potential route
+* Route - component we use for each individual page.
 
 -----------------------------------------------------------------------------------------
 
-Cool Shortcuts:
+Cool Things I Learned:
 
 * HashRouter as Router during import in Apps. This creates a nickname Router for HashRouter.
+* The Layout.jsx is the parent route to the rest of the route. - This made a lot of sense and this is how I implemented it.
+* The Outlet helps to have the Navbar in every page. - This is so helpful in navigating back and forth.
+
+Layout.jsx
+
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+import { Home } from './Pages/Home'
+import { Bugs } from './Pages/Bugs'
+import { Fish } from './Pages/Fish'
+import { VillagerInfo } from './Pages/VillagerInfo'
+import { Layout } from './Layout'
+
+function App() {
+
+  return (
+    <Router>
+      <Routes>
+        <Route element={<Layout/>}> /*This is the Parent Route, and below are the child routes*/
+          <Route path="/" element={<Home/>}/>
+          <Route path="/Bugs" element={<Bugs/>}/>
+          <Route path="/Fish" element={<Fish/>}/>
+          <Route path="/VillagerInfo" element={<VillagerInfo/>}/>
+        </Route>
+
+      </Routes>
+    </Router>
+  )
+  
+}
+
+export default App
+
 
 ---------------------------------------------------------------------------------------------
 CREDIT:
 
-* React JS Tutorial - #7 - Multiple Pages = https://www.youtube.com/watch?v=qi32YwjoN2U
+* React JS Tutorial - #7 - Multiple Pages => https://www.youtube.com/watch?v=qi32YwjoN2U
+* Nookipedia for their API => https://api.nookipedia.com/
+* React Full Course for free ⚛️ (2024) => https://www.youtube.com/watch?v=CgkZ7MvWUAA&t=5520s
 
+
+
+---------------------------------------------------------------------------------------------
+
+README.md Instruction:
 
 ● Commits and pushes must be done through the terminal/command line . 
 Commits pushed through Git Hub’s “File Upload” button will not be counted. 
