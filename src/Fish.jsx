@@ -1,13 +1,13 @@
-/*This should showcase all the Bugs that are in ACNH and can be sorted alphabetically*/
+/*This should showcase all the Fish that are in ACNH and can be sorted alphabetically*/
 
 
 import {useEffect} from 'react'
 
-function Bugs() {
+function Fish() {
     const apiKey = import.meta.env.VITE_API_KEY; /*we do this portion so we don't expose our apiKey, this is strictly for Vite */
 
     useEffect(() => {
-        fetch('https://api.nookipedia.com/nh/bugs', {
+        fetch('https://api.nookipedia.com/nh/fish', {
             headers: {
                 'X-API-KEY': apiKey,
                 'Accept-Version': '1.7.0'
@@ -19,16 +19,16 @@ function Bugs() {
             }
             return response.json();
         })
-        .then(bugs => console.log(`There's Bugs data present here.`, bugs))
+        .then(fish => console.log(`There's Fish data present here.`, fish))
         .catch(err => console.error(`Error`, err.message));
     }, []);
 
     return(
         <div>
-            <h3>BUGS</h3>
+            <h4>FISH</h4>
         </div>
     );
 
 }
 
-export default Bugs
+export default Fish
