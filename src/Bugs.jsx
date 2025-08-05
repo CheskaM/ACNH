@@ -1,11 +1,10 @@
-import campsite from './assets/campsite.jpg'
 import {useEffect} from 'react'
 
-function Tent() {
+function Bugs() {
     const apiKey = import.meta.env.VITE_API_KEY; /*we do this portion so we don't expose our apiKey, this is strictly for Vite */
 
     useEffect(() => {
-        fetch('https://api.nookipedia.com/villagers', {
+        fetch('https://api.nookipedia.com/nh/bugs', {
             headers: {
                 'X-API-KEY': apiKey,
                 'Accept-Version': '1.7.0'
@@ -17,32 +16,16 @@ function Tent() {
             }
             return response.json();
         })
-        .then(villagers => console.log(`There's data`, villagers))
+        .then(bugs => console.log(`There's Bugs data present here.`, bugs))
         .catch(err => console.error(`Error`, err.message));
     }, []);
 
     return(
         <div>
-            <h2>API response</h2>
+            <h3>BUGS</h3>
         </div>
     );
 
-
-    /*return(
-
-        <div className="tent">
-           <img className="tent-image" src={campsite} alt="picture of tent"></img>
-           <h2>Tent</h2>
-           <p>I might put the information about the villager here</p>
-
-        </div>
-
-
-
-
-
-    ); */
-
 }
 
-export default Tent
+export default Bugs
