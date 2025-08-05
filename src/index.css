@@ -1,13 +1,21 @@
+
 :root {
   display: flex;
   text-align: center;
+  justify-content: center;
+  align-items: center;
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #caf5a6;
+  background-image: url(./assets/images/acnhbg.jpg);
+  background-size: cover; /*this makes it so it shows the whole bg*/
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -30,12 +38,37 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+
+}
+
+header {
+  position: fixed; /* makes is stay in place*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(209, 213, 253, 0.546); /*this is the header bg color and how transparent it is*/
+  border-style: dashed;
+  z-index: 1000;
+
+  /*background-image: url(./assets/images/acnhlogo.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;*/
+
 }
 
 h1 {
   font-size: 3.2em;
-  line-height: 1.1;
+  line-height: 1;
+  color: white;
+  text-shadow:#646cff;
 }
+
+
 
 .tent {
   border: 1px solid hsl(0, 0%, 80%);
@@ -43,11 +76,18 @@ h1 {
   box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
   padding: 20px;
   margin: 10px;
+  margin-top: 100vh; /*so content would not get hidden under the fixed header*/
 }
 
 .tent .tent-image{
   max-width: 60%;
   height: auto;
+}
+
+footer .footer-image {
+  border-radius: 3%;
+  box-shadow: 5px 5px 5px #b8e67479;
+  border-style: dashed;
 }
 
 button {
@@ -73,6 +113,8 @@ button:focus-visible {
   :root {
     color: #213547;
     background-color: #ffffff;
+    background-attachment: scroll;
+    background-size: auto;
   }
   a:hover {
     color: #747bff;

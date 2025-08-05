@@ -1,4 +1,4 @@
-import campsite from './assets/campsite.jpg'
+import campsite from './assets/images/campsite.jpg'
 import {useEffect} from 'react'
 
 function Tent() {
