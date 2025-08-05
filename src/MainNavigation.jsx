@@ -1,6 +1,6 @@
-import Bugs from './Bugs.jsx'
-import Fish from './Fish.jsx'
-import VillagerInfo from './VillagerInfo.jsx'
+import Bugs from './Pages/Bugs.jsx'
+import Fish from './Pages/Fish.jsx'
+import VillagerInfo from './Pages/VillagerInfo.jsx'
 
 function MainNavigation() {
   return (
