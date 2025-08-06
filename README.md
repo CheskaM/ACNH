@@ -199,6 +199,13 @@ export default App
     - border: none; -> If you want no Borders.
     - border: 1px solid transparent; -> thickness(px) / not dashed or dotted / invisible
 
+    FLEX-WRAP: (Got most of the info from ChatGpt, Google, and Code You)
+    - flex-wrap: wrap; -> Items will wrap onto new lines
+    - wrap-reverse; -> items will wrap, but in reverse order
+
+    FLEX-FLOW:
+    - flex-wrap with flex direction (ex. flex-flow: row wrap;)
+
     CURSOR:
     - cursor: pointer; -> so it hovers as a Pointer when hovering on it.
 
@@ -226,9 +233,6 @@ CREDIT:
 * React Full Course for free ⚛️ (2024) => https://www.youtube.com/watch?v=CgkZ7MvWUAA&t=5520s
 * CSS Z Index Property: What is CSS Z-Index, Stacking Order, and Why Your Z-Index Is Not Working? 
   => https://www.youtube.com/watch?v=vo1JBj-OAa8
-* Dan
-* Ken
-
 
 
 ---------------------------------------------------------------------------------------------

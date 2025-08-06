@@ -44,12 +44,23 @@ body {
 
 }
 
+/* ---------------------  MAIN - Parent ------------------------------*/
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 main .tent-container {
   position: relative;
   background-color: #646cff;
 }
 
-/*Header - Parent*/
+/*-------------------------- HEADER - Parent  -----------------------------------*/
 
 header { /* makes is stay in place*/
   width: 100%;
@@ -69,11 +80,31 @@ header { /* makes is stay in place*/
 
 }
 
+header.home-header {
+  background-image: url(../src/assets/images/home-h2-header.jpg);
+  background-size: contain;
+  padding: 2rem 8px;
+}
+
 h1 {
+  width: 100%;
   font-size: 3.2em;
   line-height: 1;
   color: white;
   text-shadow:#646cff;
+}
+
+h2 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: rgb(235, 163, 175);
+  text-shadow: #535bf2;
+  background-color: #f6f2ed;
+  border-style:ridge;
 }
 
 nav {
@@ -85,21 +116,30 @@ nav {
   margin: 15px;
 }
 
-main {
+/* --------------- DIV --------------- */
+
+/*div {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  
+  flex-wrap: column wrap; 
+}*/
+
+div.island-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url(../src/assets/images/home-island-container.jpg);
 }
 
-.tent {
+#text{
+  display: flex;
+}
+
+/* .tent {
   border: 1px solid hsl(0, 0%, 80%);
   border-radius: 10px;
   box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
   padding: 20px;
   margin: 10px;
   margin-top: 100vh; /*so content would not get hidden under the fixed header*/
-}
 
 .tent .tent-image{
   max-width: 60%;

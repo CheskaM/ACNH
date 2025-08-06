@@ -1,10 +1,10 @@
 import campsite from './assets/images/campsite.jpg'
-import {useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 
 function Tent() {
     const apiKey = import.meta.env.VITE_API_KEY; /*we do this portion so we don't expose our apiKey, this is strictly for Vite */
 
-    useEffect(() => {
+    useEffect (() => {
         fetch('https://api.nookipedia.com/villagers', {
             headers: {
                 'X-API-KEY': apiKey,
@@ -22,10 +22,30 @@ function Tent() {
     }, []);
 
     return(
-        <div>
-            <h2>API response</h2>
+        <>
+            <div className="tent-box">
+                <img className='tent-img' src={campsite} alt="tent image"></img>
+            </div>
+        </>
+    )
+}
+
+export default Tent
+
+
+
+
+    /*return(
+        <div className='tent-container'>
+            <img id="random-image" src="Random image">Random Image</img>
+            <button id="btn">Get another random image</button>
         </div>
     );
+
+    const imgEl = document.getElementById('random-image');
+    const btn = document.getElementById('btn');
+
+    const srcArray = [] */
 
 
     /*return(
@@ -42,7 +62,3 @@ function Tent() {
 
 
     ); */
-
-}
-
-export default Tent
