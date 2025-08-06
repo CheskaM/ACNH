@@ -1,13 +1,13 @@
 # React + Vite
 
-IMPORTANT:
+👏 IMPORTANT:
 
 * Requires an API Key that will be submitted to Code You along with the project.
 https://docs.google.com/forms/d/e/1FAIpQLScTcSRm4VhhgNHFmk6chQ0S7ppXSa4fzrBpAwlEtaG-aOxxVw/viewform
 
 --------------------------------------------------------------------------------------------------------------------
 
-Things I'm happy about my project:
+❤️ Things I'm happy about my project:
 
 * The fact that I can build on it more especially since the Navbar has more space for pages if I want to add more stuff!
 
@@ -157,6 +157,66 @@ function App() {
 
 export default App
 
+* CSS:
+    - /* */ - to make a Comment (I love comments. The me when I first learned something might not be the Me the next day.)
+    - .button -> Global Style
+    - transition: border-color 0.25s; -> animation between states: / what you want to animate / duration os the animation(s)
+    - background-color: hsl(hue, saturation% , lightness%);
+
+    TEXT/FONT:
+    - color: white; -> This is the color of the TEXT
+
+    - font-weight: how bold or light the text appears. (Googled)
+                  -> Common Values:
+                        normal: Default weight of the font (typically 400).
+                        bold: Makes the text bold (typically 700).
+                        lighter: Makes the text lighter than the parent element's font weight.
+                        bolder: Makes the text bolder than the parent element's font weight.
+
+                    Numeric values: Ranges from 100 (thin) to 900 (extra-bold), with increments like:
+                        100 (Thin)
+                        200 (Extra Light)
+                        300 (Light)
+                        400 (Normal)
+                        500 (Medium)
+                        600 (Semi-Bold)
+                        700 (Bold)
+                        800 (Extra Bold)
+                        900 (Black)
+
+    PADDING: (Got this info from Google and Code:You)
+    - is used to create space around an element's content, inside any defined borders. 
+    - This space is the area between the content of the element and its border
+    - part of the box model so if you use box-sizing: border-box; , it will not work.
+    - padding: 25px 50px 75px 100px; /* top, right, bottom, left */
+    - One value: sets the same padding for all four sides.
+    - Two values: sets vertical and horizontal padding separately.
+    - Three values: sets top, horizontal, and bottom padding.
+    - Four values: sets padding individually for top, right, bottom, and left sides.
+    
+    BORDERS: (Got most of this info from ChatGPT, Google, and Code:You)
+    - border-radius: px; -> This is if you want rounded corners.
+    - border: none; -> If you want no Borders.
+    - border: 1px solid transparent; -> thickness(px) / not dashed or dotted / invisible
+
+    CURSOR:
+    - cursor: pointer; -> so it hovers as a Pointer when hovering on it.
+
+    HOVER:
+    - -webkit-focus-ring-color -> that blue glow-style ring around the button.
+
+    UNIT: (Got this info from ChatGPT, asked what's the difference between the units.)
+    - em -> ex. if the font-size: 2 em; (This means that it's = to 2x the paren't font size) 
+         -> mostly use as the font-size parent if no parent size is set. 
+         -> used mostly in font-sizing or spacing (padding)
+
+    - %  -> ex: width: 50%; (This means that it's = to 50% of the parent's width.)
+         -> this often is relative to the parent element's size (width/height).
+         -> used mostly in Layout, widths, or heights ()
+
+    - px -> pixel thick
+         -> used in (Border)
+
 
 ---------------------------------------------------------------------------------------------
 CREDIT:
@@ -164,6 +224,10 @@ CREDIT:
 * React JS Tutorial - #7 - Multiple Pages => https://www.youtube.com/watch?v=qi32YwjoN2U
 * Nookipedia for their API => https://api.nookipedia.com/
 * React Full Course for free ⚛️ (2024) => https://www.youtube.com/watch?v=CgkZ7MvWUAA&t=5520s
+* CSS Z Index Property: What is CSS Z-Index, Stacking Order, and Why Your Z-Index Is Not Working? 
+  => https://www.youtube.com/watch?v=vo1JBj-OAa8
+* Dan
+* Ken
 
 
 

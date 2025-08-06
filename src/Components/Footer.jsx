@@ -1,4 +1,4 @@
-import acnhHeader from './assets/images/acnhHeader.jpg'
+import acnhHeader from '../assets/images/acnhHeader.jpg'
 
 function Footer() {
     return(

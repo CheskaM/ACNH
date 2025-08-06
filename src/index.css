@@ -24,8 +24,9 @@
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: inherit;
 }
 a:hover {
@@ -33,6 +34,7 @@ a:hover {
 }
 
 body {
+  padding-top: 100px;
   margin: 0;
   display: flex;
   place-items: center;
@@ -41,17 +43,15 @@ body {
 
 }
 
-header {
-  position: fixed; /* makes is stay in place*/
-  top: 0;
-  left: 0;
+header { /* makes is stay in place*/
   width: 100%;
+  height: 75px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgba(209, 213, 253, 0.546); /*this is the header bg color and how transparent it is*/
   border-style: dashed;
-  z-index: 1000;
+  z-index: 1;
 
   /*background-image: url(./assets/images/acnhlogo.jpg);
   background-size: contain;
@@ -68,7 +68,20 @@ h1 {
   text-shadow:#646cff;
 }
 
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin: 15px;
+}
 
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .tent {
   border: 1px solid hsl(0, 0%, 80%);
@@ -84,37 +97,58 @@ h1 {
   height: auto;
 }
 
+footer {
+  color: rgb(71, 53, 14);
+}
+
 footer .footer-image {
   border-radius: 3%;
   box-shadow: 5px 5px 5px #b8e67479;
   border-style: dashed;
 }
 
+/*---------------COMPONENTS--------------------*/
+
+/*BUTTON's Parent*/
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 5px dotted thick; /* I don't know if I'm seeing this one, will come back for this.*/
   padding: 0.6em 1.2em;
   font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  font-weight: 500; /*normal, bold, lighter (lighter than the parent element), bolder (bolder than the parent element) */
+  font-family: inherit; /* This is used since not all font can be used and you want a fallback */
+  background-color: #f2b3d7c0;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #543d1f;
+  background-color: rgb(251, 238, 166);
+  color: rgba(234, 101, 101, 0.9);
 }
-button:focus,
-button:focus-visible {
+button:focus, /*style is triggered by a mouse click or keyboard*/
+button:focus-visible { /* stye is triggered only by keyboard*/
   outline: 4px auto -webkit-focus-ring-color;
+  /* add an outline around the element/ does not affect layout. */
 }
+
+/*Child Button - Navbar*/
+
+button .navbar-button {
+ display: flex;
+ flex-direction: row;
+}
+
+
+
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
     background-attachment: scroll;
-    background-size: auto;
+    background-size: contain;
+    background-position: top;
   }
   a:hover {
     color: #747bff;
