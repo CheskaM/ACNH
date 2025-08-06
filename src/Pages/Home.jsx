@@ -2,8 +2,8 @@ import { Link } from "react-router-dom"
 
 export function Home() {
     return (
-
-        <h1>This is the Home Page</h1>
-
+        <header>
+            <h1>Click on the tent to meet your Island's Villager!</h1>
+        </header>
     )
 }
