@@ -110,6 +110,24 @@ import MainNavigation from './MainNavigation.jsx';
   );
 
 ------------------------------------------------------------------------------
+
+:root {
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-image: url(./assets/images/acnhbg.jpg);
+  background-size: cover; /*this makes it so it shows the whole bg*/
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+
+
+}
 -----------------------------------------------------------------------------
 
 
@@ -162,6 +180,12 @@ export default App
     - .button -> Global Style
     - transition: border-color 0.25s; -> animation between states: / what you want to animate / duration os the animation(s)
     - background-color: hsl(hue, saturation% , lightness%);
+
+    ALIGN-ITEMS:
+    - Aligns individual items within a container along the cross axis. (top, center, bottom)
+
+    ALIGN-CONTENT:
+    - aligns multiple lines of items (wrap). rows.
 
     TEXT/FONT:
     - color: white; -> This is the color of the TEXT
