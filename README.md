@@ -5,10 +5,33 @@
 * Requires an API Key that will be submitted to Code You along with the project.
 https://docs.google.com/forms/d/e/1FAIpQLScTcSRm4VhhgNHFmk6chQ0S7ppXSa4fzrBpAwlEtaG-aOxxVw/viewform
 
----------
-Did not know that we can't store API data, it goes against cache
+-------------------------------------------------------------------------------------------------------------------
 
-* how to use as a component ex. <DoorCard apiUrl={API_URL} apiKey={API_KEY} />
+PROJECT DETAILS:
+
+My project does require an API Key and it was provided to me by Nookipedia API for free!
+LINK: https://api.nookipedia.com/
+
+❤️ My project is a Passion Project about Animal Crossing New Horizon. 
+It's basically a webpage where I can add information about anything ACNH related like the villagers, events, and creatures in ACNNH and also mini games like the Home page where you can click the tent that says "Knock Knock!!" and it will generate a random Villager that's in your Island campsite. This game mimics the portion of the game where a random Guest will just pop up in your island out of nowhere and you have to knock on the tent to figure out who is the Guest in your Island!
+
+ACNH is a cozy game and this webpage theme is also built the same! I plan on building more to it as I add more pages using React.
+
+--------------------------------------------------------------------------------------------------------------------
+
+✅ REQUIREMENTS MET:
+- Met 10 distinct commits.
+- Commits and pushes were made in Gitbash terminal.
+- Updated progress using commits.
+- Visual Appeal is pretty great I think! I'm happy with it! I did use ChatGPT, Google, and Youtube to figure out how things work.
+I have my cheat sheet in the bottom of this README.md and some of the things I learned along the way that I thought was very neat.
+- Responsive Design.
+- Able to fetch and Display API (Random Villager in Tent)
+- Media Query - NavBar buttons & Scroll
+
+3 Web Dev Capstone Features.
+- React Framework
+- Analyze data that is stored in arrays and display it in my app.
 
 
 
@@ -18,94 +41,8 @@ Did not know that we can't store API data, it goes against cache
 
 * The fact that I can build on it more especially since the Navbar has more space for pages if I want to add more stuff!
 
---------------------------------------------------------------------------------------------------------------------
-
-/*This should showcase all the Bugs that are in ACNH and can be sorted alphabetically*/
-
-
-import {useEffect} from 'react'
-
-function Bugs() {
-    const apiKey = import.meta.env.VITE_API_KEY; /*we do this portion so we don't expose our apiKey, this is strictly for Vite */
-
-    useEffect(() => {
-        fetch('https://api.nookipedia.com/nh/bugs', {
-            headers: {
-                'X-API-KEY': apiKey,
-                'Accept-Version': '1.7.0'
-            }
-        })
-        .then(response => {
-            if(!response.ok) {
-                throw new Error('API key is not working');
-            }
-            return response.json();
-        })
-        .then(bugs => console.log(`There's Bugs data present here.`, bugs))
-        .catch(err => console.error(`Error`, err.message));
-    }, []);
-
-    return(
-        <nav>
-            <ul>
-                <li><a href="#">BUGS</a></li>
-            </ul>
-        </nav>
-    );
-
-}
-
-export default Bugs
-
-
 
 -----------------------------------------------------------------------------------------
-
-/*This should showcase all the Fish that are in ACNH and can be sorted alphabetically*/
-
-
-import {useEffect} from 'react'
-
-function Fish() {
-    const apiKey = import.meta.env.VITE_API_KEY; /*we do this portion so we don't expose our apiKey, this is strictly for Vite */
-
-    useEffect(() => {
-        fetch('https://api.nookipedia.com/nh/fish', {
-            headers: {
-                'X-API-KEY': apiKey,
-                'Accept-Version': '1.7.0'
-            }
-        })
-        .then(response => {
-            if(!response.ok) {
-                throw new Error('API key is not working');
-            }
-            return response.json();
-        })
-        .then(fish => console.log(`There's Fish data present here.`, fish))
-        .catch(err => console.error(`Error`, err.message));
-    }, []);
-
-    return(
-        <nav>
-            <ul>
-                <li><a href="#">FISH</a></li>
-            </ul>
-        </nav>
-    );
-
-}
-
-export default Fish
-
-
------------------------------------------------------------------------------------------
-
-
-------------------------------------------------------------------------------
------------------------------------------------------------------------------
-
-
 
 INDEX: 
 
@@ -232,19 +169,9 @@ CREDIT:
 * React Full Course for free ⚛️ (2024) => https://www.youtube.com/watch?v=CgkZ7MvWUAA&t=5520s
 * CSS Z Index Property: What is CSS Z-Index, Stacking Order, and Why Your Z-Index Is Not Working? 
   => https://www.youtube.com/watch?v=vo1JBj-OAa8
+* Dan Collins, Ken, Michael, Blake and Tonia (You guys are the best! Thank you!)
 
 
 ---------------------------------------------------------------------------------------------
 
-README.md Instruction:
 
-● Commits and pushes must be done through the terminal/command line . 
-Commits pushed through Git Hub’s “File Upload” button will not be counted. 
-● Use Git commands consistently to demonstrate ongoing progress, not just a final upload. 
-README File A README file serves as a roadmap for your project, providing essential details to ensure clarity and accessibility for collaborators and reviewers.
-
-Requirements: 
-● Write a detailed README file explaining your project in at least one paragraph. 
-● Identify and describe three or more features you integrated from the provided list. 
-● Make a fetch request to an API and use the response in a meaningful way 
-● Include any special instructions for reviewers to run your project.

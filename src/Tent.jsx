@@ -15,8 +15,8 @@ function Tent () {
                     headers: {
                         'X-API-KEY': apiKey,
                         'Accept-Version': '1.7.0',
-                        'Cache-Control': no-cache,
-                        'Pragma': no-cache
+                        'Cache-Control': 'no-cache',
+                        'Pragma': 'no-cache'
                     }
                 });
                 
@@ -26,10 +26,13 @@ function Tent () {
 
                 const villagers = await response.json();
 
-                const randomVillager = villagers[Math.floor(Math.random() * villagers.length)];
-
-                setImageUrl(randomVillager.imageUrl);
-                setVillagerName(randomVillager.name);
+                if (Array.isArray(villagers) && villagers.length > 0) {
+                    const randomVillager = villagers[Math.floor(Math.random() * villagers.length)];
+                    setImageUrl(randomVillager.image_url);
+                    setVillagerName(randomVillager.name);
+                } else {
+                    console.error('Villager API is not working.')
+                }
 
             } catch (err) {
                 console.error(`Error`, err.message);
@@ -53,15 +56,13 @@ function Tent () {
         <div className={`tent-box ${isOpen ? "active" : ""}`} onClick={handleClick} style={{ cursor: 'pointer'}}>
             <div className='inside-tent'>
                 {!isOpen? (
-                    <div className='tent-cover'>
-                        <img className='tent-img' src={campsite} alt="tent"/>
-                    </div>
+                    <p className='knock-text'>KNOCK KNOCK!!</p>
                 ) : (
                     <div className='tent-villager'>
                         {imageUrl ? (
                             <>
-                                <img className='random-villager' src={imageUrl} alt="random villager" style={{maxWidth: '300px'}}/>
-                                <p>{villagerName}</p>
+                                <img className='random-villager' src={imageUrl} alt="random villager"/>
+                                <p className='randomVillager-name'>{villagerName}</p>
                             </>
                         ):(
                             <p>Villager Loading...</p>

@@ -26,13 +26,6 @@ header {
   background-color: rgba(209, 213, 253, 0.546); /*this is the header bg color and how transparent it is*/
   border-style: dashed;
   z-index: 1;
-
-  /*background-image: url(./assets/images/acnhlogo.jpg);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;*/
-
 }
 
 h1 {
@@ -58,9 +51,7 @@ a {
   align-items: center;
   text-decoration: inherit;
 }
-a:hover {
-  color: #535bf2;
-}
+
 
 body {
   display: flex;
@@ -109,10 +100,37 @@ main {
 article{
   display: flex;
   flex-wrap: wrap;
-  background-color: #543d1f;
+  background-color: #f3d2a9;
   padding: 10px;
 }
 
+article.tent-container{
+  width: 50vh;
+  height: 40vh;
+  justify-content: center;
+  align-content: center;
+  background-image: url(./assets/images/campsite.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+  border-radius: 10px;
+  border-style:outset;
+  border-color: brown;
+  border-width: thick;
+}
+
+p.knock-text {
+  color: brown;
+  font-weight:bold;
+  text-align: center;
+  font-size: 3rem;
+}
+
+img.random-villager{
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  display: block;
+}
 
 
 footer {
@@ -157,11 +175,6 @@ button .navbar-button {
  flex-direction: row;
 }
 
-/* ----------- HOME PAGE ---------------
-
-img.tent-img {
-
-}  */
 
 
 @media (prefers-color-scheme: light) {

@@ -8,14 +8,13 @@ export function Home() {
     return (
         <>  
             <section id="home-header">
-                <h2>Click the tents to meet your Island Villagers!</h2>
+                <h2>Click the tent to meet your Campsite Visitor!</h2>
             </section>
 
-            <article id="island">
-                <div className="tent-container">
-                    <Tent/>
-                </div>
+            <article className="tent-container">
+                <Tent/>
             </article>
+            
             
         </>
 
