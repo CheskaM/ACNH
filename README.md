@@ -5,6 +5,13 @@
 * Requires an API Key that will be submitted to Code You along with the project.
 https://docs.google.com/forms/d/e/1FAIpQLScTcSRm4VhhgNHFmk6chQ0S7ppXSa4fzrBpAwlEtaG-aOxxVw/viewform
 
+---------
+Did not know that we can't store API data, it goes against cache
+
+* how to use as a component ex. <DoorCard apiUrl={API_URL} apiKey={API_KEY} />
+
+
+
 --------------------------------------------------------------------------------------------------------------------
 
 ❤️ Things I'm happy about my project:
@@ -94,40 +101,8 @@ export default Fish
 
 -----------------------------------------------------------------------------------------
 
-import Footer from './Footer.jsx'
-import Tent from './Tent.jsx'
-import Button from './Button.jsx'
-import MainNavigation from './MainNavigation.jsx';
-
-  return (
-    <>
-      <Header/> 
-      <MainNavigation/>
-      <Tent/>
-      <Button/>
-      <Footer/>
-    </>
-  );
 
 ------------------------------------------------------------------------------
-
-:root {
-
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-image: url(./assets/images/acnhbg.jpg);
-  background-size: cover; /*this makes it so it shows the whole bg*/
-  background-repeat:no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  height: 100vh;
-
-
-}
 -----------------------------------------------------------------------------
 
 
@@ -164,7 +139,7 @@ function App() {
           <Route path="/" element={<Home/>}/>
           <Route path="/Bugs" element={<Bugs/>}/>
           <Route path="/Fish" element={<Fish/>}/>
-          <Route path="/VillagerInfo" element={<VillagerInfo/>}/>
+          <Route path="/Villagers" element={<Villagers/>}/>
         </Route>
 
       </Routes>
