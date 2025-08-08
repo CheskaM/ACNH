@@ -7,6 +7,8 @@ import { Fish } from './Pages/Fish'
 import { Villagers } from './Pages/Villagers'
 import { Layout } from './Layout'
 
+import { Chart as ChartJS } from 'chart.js/auto'
+
 function App() {
 
   return (

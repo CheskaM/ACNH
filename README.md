@@ -15,6 +15,8 @@ LINK: https://api.nookipedia.com/
 ❤️ My project is a Passion Project about Animal Crossing New Horizon. 
 It's basically a webpage where I can add information about anything ACNH related like the villagers, events, and creatures in ACNNH and also mini games like the Home page where you can click the tent that says "Knock Knock!!" and it will generate a random Villager that's in your Island campsite. This game mimics the portion of the game where a random Guest will just pop up in your island out of nowhere and you have to knock on the tent to figure out who is the Guest in your Island!
 
+Also under the Bug page, you can input an insect and it will tell you how much Tom Nook is going to pay you for it VS. how much Flick would pay you for it and it will calculate the difference. If you end up typing a bug that's not within the array or if you are inputting wrong characters, it will tell you that it doesn't see it in there.
+
 ACNH is a cozy game and this webpage theme is also built the same! I plan on building more to it as I add more pages using React.
 
 --------------------------------------------------------------------------------------------------------------------
@@ -29,9 +31,10 @@ I have my cheat sheet in the bottom of this README.md and some of the things I l
 - Able to fetch and Display API (Random Villager in Tent)
 - Media Query - NavBar buttons & Scroll
 
-3 Web Dev Capstone Features.
+✅3 Web Dev Capstone Features.
 - React Framework
 - Analyze data that is stored in arrays and display it in my app.
+- Use a regular expression to validate user input and inform them that they are invalid.
 
 
 

@@ -75,6 +75,12 @@ section#home-header {
   background-image: url(../src/assets/images/home-h2-header.jpg);
   border-color: #f8f7f6;
 }
+
+section#bug {
+  background-image: url(../src/assets/images/ACNH-Critterpedia-Feature-Bugs.webp);
+  border-color: #6d3e0f;
+}
+
 h2 {
   display: flex;
   width: 100%;
@@ -87,6 +93,20 @@ h2 {
   background-color: #f6f2ed;
   border-style:ridge;
 }
+
+h3{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: rgb(235, 163, 175);
+  text-shadow: #535bf2;
+  background-color: #f6f2ed;
+  border-style:ridge;
+}
+
 
 main {
   display: flex;
@@ -118,6 +138,21 @@ article.tent-container{
   border-width: thick;
 }
 
+article.bug-container {
+  width: 50vh;
+  height: 40vh;
+  justify-content: center;
+  align-content:flex-end;
+  background-image: url(./assets/images/animal-crossing-new-horizons-bugs-flick.avif);
+  background-repeat: no-repeat;
+  background-size:contain;
+  border-radius: 10px;
+  border-style:outset;
+  border-color: green;
+  border-width: thick;
+  background-color: rgba(108, 169, 108, 0.79);
+}
+
 p.knock-text {
   color: brown;
   font-weight:bold;
@@ -132,6 +167,21 @@ img.random-villager{
   display: block;
 }
 
+p.randomVillager-name {
+  font-size: 50px;
+  margin: 0;
+  color: brown;
+  font-weight: bold;
+  
+}
+
+input{
+  background-color: rgb(227, 227, 120);
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+}
 
 footer {
   color: rgb(71, 53, 14);
