@@ -127,6 +127,8 @@ article{
 article.tent-container{
   width: 50vh;
   height: 40vh;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-content: center;
   background-image: url(./assets/images/campsite.jpg);
@@ -145,7 +147,7 @@ article.bug-container {
   align-content:flex-end;
   background-image: url(./assets/images/animal-crossing-new-horizons-bugs-flick.avif);
   background-repeat: no-repeat;
-  background-size:contain;
+  background-size:cover;
   border-radius: 10px;
   border-style:outset;
   border-color: green;
@@ -163,8 +165,9 @@ p.knock-text {
 img.random-villager{
   width: 50%;
   height: 50%;
-  object-fit: cover;
+  object-fit:contain;
   display: block;
+
 }
 
 p.randomVillager-name {
@@ -240,5 +243,64 @@ button .navbar-button {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+/* ----------- MOBILE MEDIA QUERY----------- */
+@media screen and (max-width: 600px) {
+  header {
+    height: 60px;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 5px;
+    margin: 10px 0;
+  }
+
+  main {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  article.tent-container,
+  article.bug-container {
+    width: 90vw; 
+    height: auto; 
+    background-size: cover;
+  }
+
+  p.knock-text {
+    font-size: 1.5rem; 
+  }
+
+  img.random-villager {
+    width: 50%;
+    height: auto;
+  }
+
+  p.randomVillager-name {
+    font-size: 1.5rem;
+  }
+
+  section {
+    flex-direction: column;
+    padding: 10px;
+    margin: 5px;
+  }
+
+  h2, h3 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1rem;
   }
 }

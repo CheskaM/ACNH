@@ -16,7 +16,7 @@ export function Navbar() {
                 <button className="navbar-button">FISH</button>
             </Link>
 
-            <Link to="/VillagerInfo">
+            <Link to="/Villagers">
                 <button className="navbar-button">VILLAGERS</button>
             </Link>
         </>
